@@ -77,3 +77,16 @@
     });
 })(jQuery);
 
+document.addEventListener('DOMContentLoaded', function() {
+    var scrollToBottomLink = document.querySelector('.scroll-to-bottom');
+
+    scrollToBottomLink.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Scroll to the bottom of the page
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    });
+});
