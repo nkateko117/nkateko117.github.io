@@ -1102,3 +1102,12 @@ a:focus {
     color: #222222;
 }
 
+a {
+    color: #007BFF; /* Set your desired link color */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out; /* Add a smooth color transition */
+}
+
+a:hover {
+    color: #0056b3; /* Change the color on hover */
+}
