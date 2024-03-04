@@ -1150,6 +1150,11 @@ a:hover {
     text-decoration: none;
     cursor: pointer;
   }
+
+  #openModalBtn:hover {
+    cursor: pointer;
+}
+
   /*---------------------------- Modal for Projects Ends ---------------------------------*/
 
 
