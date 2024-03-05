@@ -96,14 +96,18 @@ document.addEventListener('DOMContentLoaded', function() {
 // Get the modal
 var modal = document.getElementById("myModal");
 var planUpModal = document.getElementById("myPlanUpModal");
+var vehicleModal = document.getElementById("myVehicleModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("openModalBtn");
 var planbtn = document.getElementById("openPlanUpModalBtn");
+var vehiclebtn = document.getElementById("openVehiclesModalBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close2")[0];
+var span3 = document.getElementsByClassName("close3")[0];
+
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -114,6 +118,10 @@ planbtn.onclick = function() {
     planUpModal.style.display = "block";
   }
 
+vehiclebtn.onclick = function() {
+    vehicleModal.style.display = "block";
+  }  
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
@@ -122,6 +130,10 @@ span.onclick = function() {
 span2.onclick = function() {
   planUpModal.style.display = "none";
 }
+
+span3.onclick = function() {
+    vehicleModal.style.display = "none";
+  }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -135,5 +147,11 @@ window.onclick = function(event) {
       planUpModal.style.display = "none";
     }
   }
+
+window.onclick = function(event) {
+    if (event.target == vehicleModal) {
+      vehicleModal.style.display = "none";
+    }
+ }
 
 //-----------------------------------Modal Ends--------------------------------------
