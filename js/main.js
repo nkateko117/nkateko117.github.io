@@ -97,16 +97,19 @@ document.addEventListener('DOMContentLoaded', function() {
 var modal = document.getElementById("myModal");
 var planUpModal = document.getElementById("myPlanUpModal");
 var vehicleModal = document.getElementById("myVehicleModal");
+var crimeModal = document.getElementById("mySACrimeStatsModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("openModalBtn");
 var planbtn = document.getElementById("openPlanUpModalBtn");
 var vehiclebtn = document.getElementById("openVehiclesModalBtn");
+var crimebtn = document.getElementById("openCrimeStatsModalBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close2")[0];
 var span3 = document.getElementsByClassName("close3")[0];
+var span4 = document.getElementsByClassName("close4")[0];
 
 
 // When the user clicks on the button, open the modal
@@ -120,7 +123,11 @@ planbtn.onclick = function() {
 
 vehiclebtn.onclick = function() {
     vehicleModal.style.display = "block";
-  }  
+  } 
+  
+crimebtn.onclick = function() {
+    crimeModal.style.display = "block";
+} 
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -135,6 +142,9 @@ span3.onclick = function() {
     vehicleModal.style.display = "none";
   }
 
+span4.onclick = function() {
+    crimeModal.style.display = "none";
+}  
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -153,5 +163,12 @@ window.onclick = function(event) {
       vehicleModal.style.display = "none";
     }
  }
+
+ 
+window.onclick = function(event) {
+  if (event.target == crimeModal) {
+    crimeModal.style.display = "none";
+  }
+}
 
 //-----------------------------------Modal Ends--------------------------------------
